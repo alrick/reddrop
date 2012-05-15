@@ -1,10 +1,10 @@
 class Daccess < ActiveRecord::Base
   def self.appkey
-    "6chg87440bmg0yr"
+    "xxxx"
   end
 
   def self.appsecret
-    "o8n4jk1udoy23ey"
+    "xxxx"
   end
 
   def self.accesstype
