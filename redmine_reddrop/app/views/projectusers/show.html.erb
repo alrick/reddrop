@@ -1,0 +1,49 @@
+<% html_title "Reddrop" %>
+<% ep = @entry['path'] %>
+<h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop</h2>
+<div class="contextual">
+    <%= link_to "Change Dropbox user", :controller => "projectusers", :action => "index", :project_id => @project.identifier %>
+</div>
+<h3 class="icon icon-user"><%= @projectuser.accesstoken.email %></h3>
+<div class="contextual">
+    <% form_tag({ :controller => "projectusers", :action => "add", :id => @projectuser, :project_id => @project.identifier }, :multipart => true) do %>
+        <%= hidden_field_tag 'parent', ep %>
+        <%= file_field_tag "file" %>
+        <%= submit_tag(value = "Add this file") %>
+    <% end %>
+</div>
+<h4>
+    <%= ep %>
+    <% if @entry['path'] != ("/Reddrop/"+@project.identifier) %>
+        <%= link_to "Up", { :controller => "projectusers", :action => "show", :path => @parentpath, :project_id => @project.identifier }, :class => "icon icon-move" %>
+    <% end %>
+</h4>
+
+<table id="listing">
+    <% @entry['contents'].each do |child| %>
+        <tr>
+        <%
+            cp = child['path']          # child path
+            cn = File.basename(cp)      # child name
+            cs = child['size']          # child size
+            ci = child['icon']+".gif"   # child icon
+        %>
+            <td><%= image_tag ci, :plugin => 'redmine_reddrop' %></td>
+            <% if child['is_dir'] %>
+                <td><b><%= link_to cn, :controller => "projectusers", :action => "show", :id => @projectuser, :path => cp, :project_id => @project.identifier %></b></td>
+            <% else %>
+                <td><b><%= link_to cn, :controller => "projectusers", :action => "download", :id => @projectuser, :path => cp, :project_id => @project.identifier %></b></td>
+                <td> (<%= cs %>)</td>
+                <td><%= link_to image_tag('delete.png'), { :controller => "projectusers", :action => "destroy", :id => @projectuser, :path => cp, :parent => ep, :name => cn, :project_id => @project.identifier }, :confirm => "Are you sure you want delete this file?" %></td>
+            <% end %>
+        </tr>
+    <% end %>
+</table>
+
+<% content_for :sidebar do %>
+    <h3>Tips</h3>
+    <ul>
+        <li>Click on folder's name to open it</li>
+        <li>Click on file's name to view/download it</li>
+    </ul>
+<% end %>

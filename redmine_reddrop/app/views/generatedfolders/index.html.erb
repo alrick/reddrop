@@ -1,0 +1,33 @@
+<% html_title "Reddrop Settings" %>
+<h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop - Settings</h2>
+<h3>Generated folders</h3>
+<table>
+	<% @generatedfolders.each do |g| %>
+		<tr>
+			<td><%= g[:name] %></td>
+			<td>
+				<%= link_to image_tag('delete.png'), { :controller => "generatedfolders", :action => "destroy", :id => g }, :confirm => "Are you sure you want delete this folder?" %>
+				<%= link_to image_tag('edit.png'), :controller => "generatedfolders", :action => "edit", :id => g %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+<br />
+<% form_tag(:controller => "generatedfolders", :action => "create") do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Add") %>
+<% end %>
+
+<% content_for :sidebar do %>
+    <h3>Information</h3>
+    <p>
+    	You can configure the project's subfolders auto-generated in the user's Dropbox when "Reddroping" a project.
+    </p>
+    <h3>Administration</h3>
+    <div id="admin-menu">
+		  <ul>
+		    <%= render_menu :admin_menu %>
+		  </ul>
+		</div>
+<% end %>

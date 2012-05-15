@@ -1,0 +1,28 @@
+<% html_title "Reddrop Linking" %>
+<h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop - Linking</h2>
+<h3>Linked account</h3>
+<p>
+	Dropbox account currently linked with your Redmine account :<br />
+	<b><i><%= @currentDbUser %></i></b>
+</p>
+
+<h3>Link your Dropbox account</h3>
+<p>
+	If your account is not yet linked with Reddrop on this Redmine, you can clic the link below.<br />
+	<i>Note: You'll be redirected to Dropbox's website to authorize Reddrop.</i><br />
+	<i>Note: A folder called "Reddrop" will be created at the root of your Dropbox. If you've already one, it will be used for this plugin.</i><br />
+	<%= link_to "Link my account", { :controller => "accesstokens", :action => "dauthorize" }, :class => "icon icon-lock" %>
+</p>
+
+<h3>Unlink your Dropbox account</h3>
+<p>
+	You can unlink your Dropbox account from this Redmine account by clicking the link below.<br />
+	<%= link_to "Unlink my account", { :controller => "accesstokens", :action => "remove" }, :class => "icon icon-unlock" %>
+<p>
+	<i>
+		In order to unlink your Dropbox account with Reddrop permanently, you have to go to 
+		<%= link_to "Dropbox's website", "http://www.dropbox.com/account#applications", :confirm => "You're about to leave Redmine." %>
+		and suppress Reddrop.<br />
+		Note that it will remove access to Reddrop for all Redmines.
+	</i>
+</p>

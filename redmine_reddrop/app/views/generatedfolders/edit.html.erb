@@ -1,0 +1,23 @@
+<% html_title "Reddrop Settings" %>
+<h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop - Settings</h2>
+<h3>Edit a generated subfolder - <%= @generatedfolder['name'] %></h3>
+<% form_tag(:controller => "generatedfolders", :action => "update", :id => @generatedfolder) do %>
+  <%= label_tag(:name, "New name:") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Edit") %>
+<% end %>
+<br />
+<%= link_to "Cancel", :controller => "generatedfolders", :action => "index" %>
+
+<% content_for :sidebar do %>
+    <h3>Information</h3>
+    <p>
+    	You can rename a generated subfolder, just enter the new name.
+    </p>
+    <h3>Administration</h3>
+    <div id="admin-menu">
+		  <ul>
+		    <%= render_menu :admin_menu %>
+		  </ul>
+		</div>
+<% end %>

@@ -1,0 +1,2 @@
+module GeneratedfoldersHelper
+end
