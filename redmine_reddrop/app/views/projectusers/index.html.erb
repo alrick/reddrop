@@ -2,26 +2,26 @@
 <h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop</h2>
 
 <p>
-	Please select a Dropbox account to consult his content.
+  Please select a Dropbox account to consult his content.
 </p>
 
 <ul>
-	<% if @projectusers.empty? %>
-		<li>No Dropbox account linked with this project.</li>
-	<% else %>
-		<% @projectusers.each do |p| %>
-			<li>
-				<%= link_to p.accesstoken.email, { :controller => "projectusers", :action => "show", :id => p, :project_id => @project.identifier }, :class => "icon icon-user" %>
-			</li>
-		<% end %>
-	<% end %>
+  <% if @projectusers.empty? %>
+    <li>No Dropbox account linked with this project.</li>
+  <% else %>
+    <% @projectusers.each do |p| %>
+      <li>
+        <%= link_to p.accesstoken.email, { :controller => "projectusers", :action => "show", :id => p, :project_id => @project.identifier }, :class => "icon icon-user" %>
+      </li>
+    <% end %>
+  <% end %>
 </ul>
 
 <% content_for :sidebar do %>
-	<% if @has_reddroped == true %>
-		<h3><%= image_tag 'reddrop_remove.png', :plugin => 'redmine_reddrop' %> <%= link_to "unReddrop this project", :controller => "projectusers", :action => "unreddropproject", :project => @project.id, :project_id => @project.identifier %></h3>
+  <% if @has_reddroped == true %>
+    <h3><%= image_tag 'reddrop_remove.png', :plugin => 'redmine_reddrop' %> <%= link_to "unReddrop this project", :controller => "projectusers", :action => "unreddropproject", :project => @project.id, :project_id => @project.identifier %></h3>
   <% else %>
-  	<h3><%= image_tag 'reddrop_add.png', :plugin => 'redmine_reddrop' %> <%= link_to "Reddrop this project", :controller => "projectusers", :action => "reddropproject", :project => @project.id, :project_id => @project.identifier %></h3>
+    <h3><%= image_tag 'reddrop_add.png', :plugin => 'redmine_reddrop' %> <%= link_to "Reddrop this project", :controller => "projectusers", :action => "reddropproject", :project => @project.id, :project_id => @project.identifier %></h3>
   <% end %>
   <p>Reddrop a project will add this project to your Dropbox account and generate necessary folders.</p>
   <p>unReddrop a project will remove access to your Dropbox for this project, you will keep files in your Dropbox and can delete them manually.</p>

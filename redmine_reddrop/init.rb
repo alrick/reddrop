@@ -12,8 +12,8 @@ Redmine::Plugin.register :redmine_reddrop do
   menu :admin_menu, :reddrop, { :controller => 'generatedfolders', :action => 'index' }, :caption => 'Reddrop settings', :last => true
   
   project_module :reddrop do
-  	permission :reddrop_consult_projectfolders, { :projectusers => [:index, :show, :download, :reddropproject, :unreddropproject] }
-  	permission :reddrop_interact_projectfolders, { :projectusers => [:destroy, :add] }
-	end
-	menu :project_menu, :reddrop, { :controller => 'projectusers', :action => 'index' }, :caption => 'Reddrop', :after => :activity, :param => :project_id
+    permission :reddrop_consult_projectfolders, { :projectusers => [:index, :show, :download, :reddropproject, :unreddropproject] }
+    permission :reddrop_interact_projectfolders, { :projectusers => [:destroy, :add] }
+  end
+  menu :project_menu, :reddrop, { :controller => 'projectusers', :action => 'index' }, :caption => 'Reddrop', :after => :activity, :param => :project_id
 end

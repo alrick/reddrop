@@ -4,10 +4,10 @@ class Daccess < ActiveRecord::Base
   end
 
   def self.appsecret
-  	"o8n4jk1udoy23ey"
+    "o8n4jk1udoy23ey"
   end
 
   def self.accesstype
-  	:dropbox
+    :dropbox
   end
 end
