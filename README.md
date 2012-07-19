@@ -1,6 +1,62 @@
-Reddrop
-=======
-
+## Description
 Reddrop is a plugin for Redmine that allows users of that service to sync their documents and files using Dropbox.
 
-::See the wiki for more informations.
+## Before install
+You must install the official Dropbox's Ruby SDK in order to use Reddrop.
+You can do this by simply run the following command on your server :
+`$ gem install dropbox-sdk`
+
+## How to install
+Once you've installed the Dropbox's Ruby SDK, simply follow this steps : 
+
+1. add the `redmine_reddrop` folder in the `#{RAILS_ROOT}/vendor/plugins` folder of your Redmine installation.
+2. run `$ rake db:migrate_plugins RAILS_ENV=production` (you should make a DB backup before)
+3. restart Redmine
+
+And that's all, you should be able to view the plugin in _Administration -> Plugins_ and start using it.
+
+## User functionalities
+### Link your Dropbox account to Redmine
+You have to link your account before you can use the plugin.
+
+In order to link you Dropbox account to Redmine go to "Reddrop Linking" page with the top left menu.
+On this page, you can link or unlink a Dropbox account depending on whether you have already linked your account or not.
+
+### Reddrop a project
+When you've linked your Dropbox account with your Redmine account, you're able to "Reddrop" a project.
+
+Go on a project page and then Reddrop tab. You will find a "Reddrop this project" link on the sidebar of each Reddrop tab. Once you've Reddroped a project, the structure of folders will be generated on your Dropbox and other users will be able to consult them. The generated folders are located at `/Reddrop/project-id/` in your Dropbox. Each changes in your Dropbox folders will be reflected in Redmine.
+
+### Consult folders of a project
+Go on a project page and then Reddrop Tab. In the main part of the page, you'll find all users that have reddroped this project.
+Select a user and you will be able to browse its folders, add and remove files.
+
+### Share a Reddrop folder
+You can use the Dropbox "shared folders" option to share folders that are linked to Redmine with Reddrop. Simply share any folders you want to but remember that only one person have to Reddrop this folder to avoid duplication.
+
+### Usual process for a group
+Only **one person** create a "shared folder" in his Dropbox, share it with other members of the group and "Reddrop" it on the project page of Redmine.
+
+## Admin functionalities
+### Configure generated folders
+As an admin, you can configure folders that are generated in the user's Dropbox when they Reddrop a project.
+
+In order to access this functionality, go to Administration -> Reddrop settings.
+In this page you can add, remove or rename folders that are generated. 
+
+## How to uninstall
+
+To uninstall Reddrop, simply follow this steps :
+
+1. run `$ rake db:migrate:plugin NAME=redmine_reddrop VERSION=0 RAILS_ENV=production` (you should make a DB backup before)
+2. remove `redmine_reddrop` from `#{RAILS_ROOT}/vendor/plugins`
+3. restart Redmine
+
+And that's all, the plugin is removed from your Redmine.
+
+## Logos
+
+![16](https://dl.dropbox.com/s/4716y6t7odo6x8j/reddrop_16.png) 
+![32](https://dl.dropbox.com/s/hgwh3olfw9b5t8m/reddrop_32.png) 
+![64](https://dl.dropbox.com/s/1drox3uhpc75srm/reddrop_64.png) 
+![128](https://dl.dropbox.com/s/m08u0tff84n92tg/reddrop_128.png)
