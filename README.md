@@ -6,7 +6,8 @@ Reddrop is a replacement for the _files_ and _documents_ tabs in Redmine and all
 
 ## Donate
 If you like it, feel free to donate some love ;)
-[![Donate](https://www.dropbox.com/s/tn3se28uzpj4njl/btn_donate_LG.gif)](https://www.dropbox.com/s/tn3se28uzpj4njl/btn_donate_LG.gif)
+
+[![Donate](https://dl.dropbox.com/s/tn3se28uzpj4njl/btn_donate_LG.gif)](https://www.dropbox.com/s/tn3se28uzpj4njl/btn_donate_LG.gif)
 
 ## Install & Uninstall
 ### Before install
