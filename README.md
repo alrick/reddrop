@@ -57,8 +57,10 @@ In this page you can add, remove or rename folders that are generated.
 
 # Goodies
 ## Logos
-
 ![16](https://dl.dropbox.com/s/4716y6t7odo6x8j/reddrop_16.png) 
 ![32](https://dl.dropbox.com/s/hgwh3olfw9b5t8m/reddrop_32.png) 
 ![64](https://dl.dropbox.com/s/1drox3uhpc75srm/reddrop_64.png) 
 ![128](https://dl.dropbox.com/s/m08u0tff84n92tg/reddrop_128.png)
+
+## Preview
+![wrong](https://dl.dropbox.com/s/8b9y26wfc05zq9a/reddrop_projectroot.png)
