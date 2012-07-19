@@ -1,6 +1,7 @@
-## Description
+# Description
 Reddrop is a plugin for Redmine that allows users of that service to sync their documents and files using Dropbox.
 
+# Install & Uninstall
 ## Before install
 You must install the official Dropbox's Ruby SDK in order to use Reddrop.
 You can do this by simply run the following command on your server :
@@ -15,6 +16,16 @@ Once you've installed the Dropbox's Ruby SDK, simply follow this steps :
 
 And that's all, you should be able to view the plugin in _Administration -> Plugins_ and start using it.
 
+## How to uninstall
+To uninstall Reddrop, simply follow this steps :
+
+1. run `$ rake db:migrate:plugin NAME=redmine_reddrop VERSION=0 RAILS_ENV=production` (you should make a DB backup before)
+2. remove `redmine_reddrop` from `#{RAILS_ROOT}/vendor/plugins`
+3. restart Redmine
+
+And that's all, the plugin is removed from your Redmine.
+
+# Functionalities
 ## User functionalities
 ### Link your Dropbox account to Redmine
 You have to link your account before you can use the plugin.
@@ -42,18 +53,9 @@ Only **one person** create a "shared folder" in his Dropbox, share it with other
 As an admin, you can configure folders that are generated in the user's Dropbox when they Reddrop a project.
 
 In order to access this functionality, go to Administration -> Reddrop settings.
-In this page you can add, remove or rename folders that are generated. 
+In this page you can add, remove or rename folders that are generated.
 
-## How to uninstall
-
-To uninstall Reddrop, simply follow this steps :
-
-1. run `$ rake db:migrate:plugin NAME=redmine_reddrop VERSION=0 RAILS_ENV=production` (you should make a DB backup before)
-2. remove `redmine_reddrop` from `#{RAILS_ROOT}/vendor/plugins`
-3. restart Redmine
-
-And that's all, the plugin is removed from your Redmine.
-
+# Goodies
 ## Logos
 
 ![16](https://dl.dropbox.com/s/4716y6t7odo6x8j/reddrop_16.png) 
