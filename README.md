@@ -12,7 +12,7 @@ You also have to get your own Dropbox's API keys :
 1. Go to https://www.dropbox.com/developers/apps
 2. Create your application
 3. Ask for production status
-4. Configure the _appkey_ and _appsecret_ in _redmine reddrop/app/models/daccess.rb_
+4. Configure the _appkey_ and _appsecret_ in _redmine_reddrop/app/models/daccess.rb_
 
 ## How to install
 Once you've installed the Dropbox's Ruby SDK, simply follow this steps : 
