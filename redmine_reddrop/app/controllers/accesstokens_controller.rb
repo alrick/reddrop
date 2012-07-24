@@ -1,9 +1,5 @@
 #### configuration ####
 require 'dropbox_sdk' # SDK needed to use Dropbox's API
-
-# APP_KEY = "6chg87440bmg0yr"
-# APP_SECRET = "o8n4jk1udoy23ey"
-# ACCESS_TYPE = :dropbox
 #### end of configuration ####
 
 class AccesstokensController < ApplicationController
