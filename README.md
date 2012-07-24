@@ -12,11 +12,7 @@ If you like it, feel free to donate some love ;)
 
 ## Install & Uninstall
 ### Before install
-You must install the official Dropbox's Ruby SDK in order to use Reddrop.
-You can do this by simply run the following command on your server :
-`$ gem install dropbox-sdk`
-
-You also have to get your own Dropbox's API keys : 
+You have to get your own Dropbox's API keys : 
 
 1. Go to https://www.dropbox.com/developers/apps
 2. Create your application
