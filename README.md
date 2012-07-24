@@ -28,7 +28,8 @@ Once you've installed the Dropbox's Ruby SDK, simply follow this steps :
 
 1. add the `redmine_reddrop` folder in the `#{RAILS_ROOT}/plugins` (Redmine 2.x) or `#{RAILS_ROOT}/vendor/plugins` (Redmine 1.x) folder of your Redmine installation.
 2. run `$ rake db:migrate_plugins RAILS_ENV=production` (you should make a DB backup before)
-3. restart Redmine
+3. run `$ bundle install`
+4. restart Redmine
 
 And that's all, you should be able to view the plugin in _Administration -> Plugins_ and start using it.
 
