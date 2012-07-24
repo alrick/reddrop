@@ -26,7 +26,7 @@ You also have to get your own Dropbox's API keys :
 ### How to install
 Once you've installed the Dropbox's Ruby SDK, simply follow this steps : 
 
-1. add the `redmine_reddrop` folder in the `#{RAILS_ROOT}/vendor/plugins` folder of your Redmine installation.
+1. add the `redmine_reddrop` folder in the `#{RAILS_ROOT}/plugins` (Redmine 2.x) or `#{RAILS_ROOT}/vendor/plugins` (Redmine 1.x) folder of your Redmine installation.
 2. run `$ rake db:migrate_plugins RAILS_ENV=production` (you should make a DB backup before)
 3. restart Redmine
 
