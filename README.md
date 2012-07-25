@@ -66,11 +66,16 @@ You can use the Dropbox "shared folders" option to share folders that are linked
 Only **one person** create a "shared folder" in his Dropbox, share it with other members of the group and "Reddrop" it on the project page of Redmine.
 
 ### Admin functionalities
+#### Configure permissions
+There is two permissions that you can manage "Reddrop consult projectfolders" which allows consulting linked Dropboxs and "Reddrop interact projectfolders" which allows to add and remove files in the linked Dropboxs.
+
+In order to modify this permissions, simply go to Administration -> Roles and permissions. They are grouped as "Reddrop".
+
 #### Configure generated folders
 As an admin, you can configure folders that are generated in the user's Dropbox when they Reddrop a project.
 
 In order to access this functionality, go to Administration -> Reddrop settings.
-In this page you can add, remove or rename folders that are generated.
+On this page you can add, remove or rename folders that are generated.
 
 ## Goodies
 ### Logos
