@@ -67,7 +67,7 @@ Only **one person** create a "shared folder" in his Dropbox, share it with other
 
 ### Admin functionalities
 #### Configure permissions
-There is two permissions that you can manage "Reddrop consult projectfolders" which allows consulting linked Dropboxs and "Reddrop interact projectfolders" which allows to add and remove files in the linked Dropboxs.
+There is two permissions that you can manage : "Reddrop consult projectfolders" which allows consulting linked Dropboxs and "Reddrop interact projectfolders" which allows to add and remove files in the linked Dropboxs.
 
 In order to modify this permissions, simply go to Administration -> Roles and permissions. They are grouped as "Reddrop".
 
