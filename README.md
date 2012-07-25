@@ -10,6 +10,9 @@ If you like it, feel free to donate some love ;)
 
 [![Donate](https://dl.dropbox.com/s/78atptrrwraymgb/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EP9QQNXD9BRNE)
 
+## Compatibility
+Reddrop has been tested with Redmine 2.0.3. Let me know if you succeeded run it on other versions.
+
 ## Install & Uninstall (Redmine 2.0.3)
 ### Before install
 You have to get your own Dropbox's API keys : 
@@ -34,7 +37,8 @@ To uninstall Reddrop, simply follow this steps :
 
 1. run `$ rake redmine:plugins:migrate NAME=redmine_reddrop VERSION=0 RAILS_ENV=production` (you should make a DB backup before)
 2. remove `redmine_reddrop` from `#{RAILS_ROOT}/plugins`
-3. restart Redmine
+3. run `$ bundle install`
+4. restart Redmine
 
 And that's all, the plugin is removed from your Redmine.
 
