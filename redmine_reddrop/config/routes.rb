@@ -1,2 +1,21 @@
-match "/accesstokens", :to => "accesstokens#index", :via => :get
-match "/generatedfolders", :to => "generatedfolders#index", :via => :get
+match 'accesstokens', :to => 'accesstokens#index'
+match 'accesstokens/index', :to => 'accesstokens#index'
+match 'accesstokens/dauthorize', :to => 'accesstokens#dauthorize'
+match 'accesstokens/remove', :to => 'accesstokens#remove'
+
+match 'projectusers', :to => 'projectusers#index'
+match 'projectusers/index', :to => 'projectusers#index'
+match 'projectusers/show/:id', :to => 'projectusers#show'
+match 'projectusers/destroy/:id', :to => 'projectusers#destroy'
+match 'projectusers/add/:id', :to => 'projectusers#add'
+match 'projectusers/download/:id', :to => 'projectusers#download'
+match 'projectusers/reddropproject', :to => 'projectusers#reddropproject'
+match 'projectusers/unreddropproject', :to => 'projectusers#unreddropproject'
+match 'projectusers/find_project', :to => 'projectusers#find_project'
+
+match 'generatedfolders', :to => 'generatedfolders#index'
+match 'generatedfolders/index', :to => 'generatedfolders#index'
+match 'generatedfolders/edit/:id', :to => 'generatedfolders#edit'
+match 'generatedfolders/create', :to => 'generatedfolders#create'
+match 'generatedfolders/update/:id', :to => 'generatedfolders#update'
+match 'generatedfolders/destroy/:id', :to => 'generatedfolders#destroy'
