@@ -9,7 +9,7 @@ Redmine::Plugin.register :redmine_reddrop do
   author_url 'http://curlybrackets.ch'
 
   menu :top_menu, :reddrop, { :controller => 'accesstokens', :action => 'index' }, :caption => 'Reddrop linking', :before => 'Help'
-  menu :admin_menu, :reddrop, { :controller => 'generatedfolders', :action => 'index' }, :caption => 'Reddrop settings', :last => true
+  menu :admin_menu, :reddrop, { :controller => 'generatedfolders', :action => 'index' }, :caption => 'Reddrop settings', :last => true, :html => {:style => 'background: url(/plugin_assets/redmine_reddrop/images/reddrop_16.png); background-repeat: no-repeat'}
   
   project_module :reddrop do
     permission :reddrop_consult_projectfolders, { :projectusers => [:index, :show, :download, :reddropproject, :unreddropproject] }
