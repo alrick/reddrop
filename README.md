@@ -23,7 +23,7 @@ You have to get your own Dropbox's API keys :
 4. Configure the _appkey_ and _appsecret_ in _redmine_reddrop/app/models/daccess.rb_
 
 ### How to install
-Once you've installed the Dropbox's Ruby SDK, simply follow this steps : 
+Once you've configured your Dropbox's keys, simply follow this steps : 
 
 1. add the `redmine_reddrop` folder in the `#{RAILS_ROOT}/plugins` folder of your Redmine installation.
 2. run `$ rake redmine:plugins:migrate RAILS_ENV=production` (you should make a DB backup before)
