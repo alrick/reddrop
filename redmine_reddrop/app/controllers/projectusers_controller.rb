@@ -150,6 +150,12 @@ class ProjectusersController < ApplicationController
         return
       end
 
+      # create the project folder as starting point
+      begin
+        client.file_create_folder("/Reddrop/"+params[:project_id])
+      rescue Exception => e
+      end
+      
       # get folder structure to generated
       @generatedfolders = Generatedfolder.find(:all, :order => "name")
 
