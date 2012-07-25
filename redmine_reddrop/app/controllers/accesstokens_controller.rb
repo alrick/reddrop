@@ -5,6 +5,8 @@ require 'dropbox_sdk' # SDK needed to use Dropbox's API
 class AccesstokensController < ApplicationController
   unloadable
 
+  before_filter :check_anonymous
+
   def index
     if(check_exists)
       cat = Accesstoken.first(:conditions => ["user = ?", User.current.id])
@@ -84,6 +86,13 @@ class AccesstokensController < ApplicationController
     else
       flash[:error] = "No Dropbox account linked to this Redmine account."
       redirect_to :action => "index"
+    end
+  end
+
+  def check_anonymous
+    if(User.current.anonymous?)
+      flash[:error] = "You must be logged in to link an account."
+      redirect_to :controller => "welcome"
     end
   end
 
