@@ -6,7 +6,7 @@
     <tr>
       <td><%= g[:name] %></td>
       <td>
-        <%= link_to image_tag('delete.png'), { :controller => "generatedfolders", :action => "destroy", :id => g }, :confirm => "Are you sure you want delete this folder?" %>
+        <%= link_to image_tag('delete.png'), { :controller => "generatedfolders", :action => "destroy", :id => g }, :data => { :confirm => 'Are you sure you want delete this folder?' } %>
         <%= link_to image_tag('edit.png'), :controller => "generatedfolders", :action => "edit", :id => g %>
       </td>
     </tr>
