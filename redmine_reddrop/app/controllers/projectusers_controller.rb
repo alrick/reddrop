@@ -155,7 +155,7 @@ class ProjectusersController < ApplicationController
         client.file_create_folder("/Reddrop/"+params[:project_id])
       rescue Exception => e
       end
-      
+
       # get folder structure to generated
       @generatedfolders = Generatedfolder.find(:all, :order => "name")
 
@@ -175,7 +175,7 @@ class ProjectusersController < ApplicationController
         redirect_to :action => "index", :project_id => params[:project_id]
       end
     else
-      flash[:error] = "You must link a Dropbox account before you can Reddrop a project."
+      flash[:error] = "You must link a Dropbox account before you can Reddrop a project. Go to \"Reddrop linking\" on top menu."
       redirect_to :action => "index", :project_id => params[:project_id]
     end
   end
