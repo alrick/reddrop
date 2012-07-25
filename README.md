@@ -23,7 +23,7 @@ You have to get your own Dropbox's API keys :
 Once you've installed the Dropbox's Ruby SDK, simply follow this steps : 
 
 1. add the `redmine_reddrop` folder in the `#{RAILS_ROOT}/plugins` (Redmine 2.x) or `#{RAILS_ROOT}/vendor/plugins` (Redmine 1.x) folder of your Redmine installation.
-2. run `$ rake db:migrate_plugins RAILS_ENV=production` (you should make a DB backup before)
+2. run `$ rake redmine:plugins:migrate RAILS_ENV=production` (you should make a DB backup before)
 3. run `$ bundle install`
 4. restart Redmine
 
@@ -32,7 +32,7 @@ And that's all, you should be able to view the plugin in _Administration -> Plug
 ### How to uninstall
 To uninstall Reddrop, simply follow this steps :
 
-1. run `$ rake db:migrate:plugin NAME=redmine_reddrop VERSION=0 RAILS_ENV=production` (you should make a DB backup before)
+1. run `$ rake redmine:plugins:migrate NAME=redmine_reddrop VERSION=0 RAILS_ENV=production` (you should make a DB backup before)
 2. remove `redmine_reddrop` from `#{RAILS_ROOT}/vendor/plugins`
 3. restart Redmine
 
