@@ -13,7 +13,7 @@
   <% end %>
 </table>
 <br />
-<% form_tag(:controller => "generatedfolders", :action => "create") do %>
+<%= form_tag(:controller => "generatedfolders", :action => "create") do %>
   <%= label_tag(:name, "Name:") %>
   <%= text_field_tag(:name) %>
   <%= submit_tag("Add") %>

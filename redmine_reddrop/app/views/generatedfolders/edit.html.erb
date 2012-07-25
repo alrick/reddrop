@@ -1,7 +1,7 @@
 <% html_title "Reddrop Settings" %>
 <h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop - Settings</h2>
 <h3>Edit a generated subfolder - <%= @generatedfolder['name'] %></h3>
-<% form_tag(:controller => "generatedfolders", :action => "update", :id => @generatedfolder) do %>
+<%= form_tag(:controller => "generatedfolders", :action => "update", :id => @generatedfolder) do %>
   <%= label_tag(:name, "New name:") %>
   <%= text_field_tag(:name) %>
   <%= submit_tag("Edit") %>

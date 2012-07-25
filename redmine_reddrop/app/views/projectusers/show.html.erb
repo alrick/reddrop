@@ -6,7 +6,7 @@
 </div>
 <h3 class="icon icon-user"><%= @projectuser.accesstoken.email %></h3>
 <div class="contextual">
-    <% form_tag({ :controller => "projectusers", :action => "add", :id => @projectuser, :project_id => @project.identifier }, :multipart => true) do %>
+    <%= form_tag({ :controller => "projectusers", :action => "add", :id => @projectuser, :project_id => @project.identifier }, :multipart => true) do %>
         <%= hidden_field_tag 'parent', ep %>
         <%= file_field_tag "file" %>
         <%= submit_tag(value = "Add this file") %>
@@ -34,7 +34,7 @@
             <% else %>
                 <td><b><%= link_to cn, :controller => "projectusers", :action => "download", :id => @projectuser, :path => cp, :project_id => @project.identifier %></b></td>
                 <td> (<%= cs %>)</td>
-                <td><%= link_to image_tag('delete.png'), { :controller => "projectusers", :action => "destroy", :id => @projectuser, :path => cp, :parent => ep, :name => cn, :project_id => @project.identifier }, :confirm => "Are you sure you want delete this file?" %></td>
+                <td><%= link_to image_tag('delete.png'), { :controller => "projectusers", :action => "destroy", :id => @projectuser, :path => cp, :parent => ep, :name => cn, :project_id => @project.identifier }, :data => { :confirm => 'Are you sure you want delete this file?' } %></td>
             <% end %>
         </tr>
     <% end %>
