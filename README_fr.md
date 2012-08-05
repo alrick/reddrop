@@ -60,7 +60,7 @@ Aller sur la page d'un projet puis onglet Reddrop. Sur la partie principale de l
 Après avoir choisi un utilisateur, il est possible de consulter ses dossiers ainsi qu'ajouter et supprimer des fichiers.
 
 #### Partager un dossier Reddrop
-Il est possible d'utiliser la fonctionnalité de partage de Dropbox pour partager les dossiers lié à Redmine via Reddrop. Il suffit de le partager comme tout autre dossier de Dropbox, il est cependant important de noter qu'une seule personne devra alors "Reddrop" ce dossier afin d'éviter une duplication.
+Il est possible d'utiliser la fonctionnalité de partage de Dropbox pour partager les dossiers liés à Redmine via Reddrop. Il suffit de le partager comme tout autre dossier de Dropbox, il est cependant important de noter qu'une seule personne devra alors "Reddrop" ce dossier afin d'éviter une duplication.
 
 #### Processus habituel pour un groupe
 Seule **une personne** "Reddrop" le projet sur Redmine, il va ensuite partager le dossier du projet créé sous Reddrop avec les autres membres du groupe.
