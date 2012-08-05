@@ -63,7 +63,7 @@ Select a user and you will be able to browse its folders, add and remove files.
 You can use the Dropbox "shared folders" option to share folders that are linked to Redmine with Reddrop. Simply share any folders you want to but remember that only one person have to Reddrop this folder to avoid duplication.
 
 #### Usual process for a group
-Only **one person** create a "shared folder" in his Dropbox, share it with other members of the group and "Reddrop" it on the project page of Redmine.
+Only **one person** reddrop the project on Redmine and share it with others with Dropbox "shared folders" functionality.
 
 ### Admin functionalities
 #### Configure permissions
