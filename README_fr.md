@@ -65,7 +65,7 @@ Il est possible d'utiliser la fonctionnalité de partage de Dropbox pour partage
 #### Processus habituel pour un groupe
 Seule **une personne** "Reddrop" le projet sur Redmine, il va ensuite partager le dossier du projet créé sous Reddrop avec les autres membres du groupe.
 
-### Fonctionnalité administrateur
+### Fonctionnalités administrateur
 #### Configurer les permissions
 Il est possible de gérer deux permissions : "Reddrop consult projectfolders" qui permet de consulter les Dropbox liées aux projets ainsi que "Reddrop interact projectfolders" qui permet d'autoriser l'ajout et la suppression de fichiers aux Dropbox liées via Redmine.
 
