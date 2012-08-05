@@ -69,7 +69,7 @@ Only **one person** reddrop the project on Redmine and share it with others with
 #### Configure permissions
 There is two permissions that you can manage : "Reddrop consult projectfolders" which allows consulting linked Dropboxs and "Reddrop interact projectfolders" which allows to add and remove files in the linked Dropboxs.
 
-In order to modify this permissions, simply go to Administration -> Roles and permissions. They are grouped as "Reddrop".
+In order to modify this permissions, simply go to _Administration -> Roles and permissions_. They are grouped as "Reddrop".
 
 #### Configure generated folders
 As an admin, you can configure folders that are generated in the user's Dropbox when they Reddrop a project.
