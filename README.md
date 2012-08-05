@@ -74,7 +74,7 @@ In order to modify this permissions, simply go to _Administration -> Roles and p
 #### Configure generated folders
 As an admin, you can configure folders that are generated in the user's Dropbox when they Reddrop a project.
 
-In order to access this functionality, go to Administration -> Reddrop settings.
+In order to access this functionality, go to _Administration -> Reddrop_ settings.
 On this page you can add, remove or rename folders that are generated.
 
 ## Goodies
