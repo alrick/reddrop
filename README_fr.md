@@ -2,7 +2,7 @@
 -----------
 
 ## Description
-Reddrop est un plugin pour Redmine qui permet aux utilisateurs de ce service de synchroniser leurs documents et fichier avec Dropbox.
+Reddrop est un plugin pour Redmine qui permet aux utilisateurs de ce service de synchroniser leurs documents et fichiers avec Dropbox.
 Reddrop remplace les onglets _files_ et _documents_ de Redmine et permet de naviguer un dossier spécifique de Dropbox de manière hierarchique.
 
 ## Donation
