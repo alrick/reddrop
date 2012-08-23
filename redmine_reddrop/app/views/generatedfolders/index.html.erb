@@ -1,6 +1,7 @@
 <% html_title "Reddrop Settings" %>
 <h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop - Settings</h2>
 <h3>Generated folders</h3>
+<p><b>Note : </b>Spaces will be converted to '_' and special characters will be removed.</p>
 <table>
   <% @generatedfolders.each do |g| %>
     <tr>
