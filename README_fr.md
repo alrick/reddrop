@@ -26,8 +26,8 @@ Il est nécessaire d'optenir vos propres clés pour l'API Dropbox :
 Une fois les clés configurées, suivre les étapes suivantes :
 
 1. ajouter le dossier `redmine_reddrop` dans le dossier `#{RAILS_ROOT}/plugins` de l'installation Redmine.
-2. effectuer la commande `$ rake redmine:plugins:migrate RAILS_ENV=production` (une backup de la base de données est recommandée avant)
-3. effectuer la commande `$ bundle install`
+2. effectuer la commande `$ bundle install`
+3. effectuer la commande `$ rake redmine:plugins:migrate RAILS_ENV=production` (une backup de la base de données est recommandée avant)
 4. redémarrer Redmine
 
 Et voilà, le plugin devrait être visible sous _Administration -> Plugins_, vous pouvez maintenant l'utiliser.
