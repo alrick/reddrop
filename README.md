@@ -26,8 +26,8 @@ You have to get your own Dropbox's API keys :
 Once you've configured your Dropbox's keys, simply follow this steps : 
 
 1. add the `redmine_reddrop` folder in the `#{RAILS_ROOT}/plugins` folder of your Redmine installation.
-2. run `$ rake redmine:plugins:migrate RAILS_ENV=production` (you should make a DB backup before)
-3. run `$ bundle install`
+2. run `$ bundle install`
+3. run `$ rake redmine:plugins:migrate RAILS_ENV=production` (you should make a DB backup before)
 4. restart Redmine
 
 And that's all, you should be able to view the plugin in _Administration -> Plugins_ and start using it.
