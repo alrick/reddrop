@@ -9,7 +9,8 @@ class AccesstokensController < ApplicationController
 
   def index
     if(check_exists)
-      cat = Accesstoken.first(:conditions => ["user = ?", User.current.id])
+      cat = Accesstoken.where(:user => User.current.id).first
+      #cat = Accesstoken.first(:conditions => ["user = ?", User.current.id])
       @currentDbUser = cat.email
     else
       @currentDbUser = "No account linked"

@@ -13,7 +13,7 @@ class ProjectusersController < ApplicationController
     # check if user has reddroped project, to allow him to reddrop or unreddrop accordingly
     @has_reddroped = false
     if(Accesstoken.exists?(:user => User.current.id))
-      cat = Accesstoken.first(:conditions => ["user = ?", User.current.id])
+      cat = Accesstoken.where(:user => User.current.id).first
       if(Projectuser.count(:conditions => ["accesstoken_id = ? AND project = ?", cat.id, @project.id]) > 0)
         @has_reddroped = true
       end
@@ -136,7 +136,7 @@ class ProjectusersController < ApplicationController
 
   def reddropproject
     if(Accesstoken.exists?(:user => User.current.id))
-      cat = Accesstoken.first(:conditions => ["user = ?", User.current.id])
+      cat = Accesstoken.where(:user => User.current.id).first
       p = Projectuser.new(:project => params[:project], :accesstoken_id => cat.id)
       
       #get client to access dropbox
@@ -182,7 +182,7 @@ class ProjectusersController < ApplicationController
 
   def unreddropproject
     if(Accesstoken.exists?(:user => User.current.id))
-      cat = Accesstoken.first(:conditions => ["user = ?", User.current.id])
+      cat = Accesstoken.where(:user => User.current.id).first
       p = Projectuser.first(:conditions => ["accesstoken_id = ? AND project = ?", cat.id, params[:project]])
       if p.destroy
         flash[:notice] = "Project successfully unReddroped."
