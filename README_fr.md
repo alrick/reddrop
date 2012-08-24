@@ -18,7 +18,7 @@ Reddrop a été testé avec Redmine 2.0.3. Si vous l'avez mis en place avec une 
 Il est nécessaire d'optenir vos propres clés pour l'API Dropbox :
 
 1. Aller sur https://www.dropbox.com/developers/apps
-2. Créer son application
+2. Créer son application (Attention : niveau d'accès nécessaire : Full Dropbox)
 3. Demander le status de production
 4. Configurer les _appkey_ and _appsecret_ dans _redmine_reddrop/app/models/daccess.rb_
 
