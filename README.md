@@ -11,7 +11,12 @@ If you like it, feel free to donate some love ;)
 [![Donate](https://dl.dropbox.com/s/78atptrrwraymgb/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EP9QQNXD9BRNE)
 
 ## Compatibility
-Reddrop has been tested with Redmine 2.0.3. Let me know if you succeeded run it on other versions.
+Reddrop is compatible with the following versions :
+
+* 2.0.3 (tested)
+* 2.3 (feedback)
+
+Let me know if you succeeded run it on other versions.
 
 ## Install & Uninstall (Redmine 2.0.3)
 ### Before install
