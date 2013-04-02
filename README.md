@@ -14,7 +14,7 @@ If you like it, feel free to donate some love ;)
 Reddrop is compatible with the following versions :
 
 * 2.0.3 (tested)
-* 2.3 (feedback)
+* 2.3 (feedback, thanks to Avery Chan)
 
 Let me know if you succeeded run it on other versions.
 
