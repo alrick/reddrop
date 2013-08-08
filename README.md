@@ -18,7 +18,7 @@ Reddrop is compatible with the following versions :
 
 Let me know if you succeeded run it on other versions.
 
-## Install & Uninstall (Redmine 2.0.3)
+## Install & Uninstall
 ### Before install
 You have to get your own Dropbox's API keys : 
 
