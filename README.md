@@ -8,7 +8,7 @@ Reddrop is a replacement for the _files_ and _documents_ tabs in Redmine and all
 ## Donate
 If you like it, feel free to donate some love ;)
 
-[![Donate](https://dl.dropbox.com/s/78atptrrwraymgb/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EP9QQNXD9BRNE)
+[![Donate](https://dl.dropboxusercontent.com/s/lo09p6qmz5o20so/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EP9QQNXD9BRNE)
 
 ## Compatibility
 Reddrop is compatible with the following versions :
@@ -84,13 +84,13 @@ On this page you can add, remove or rename folders that are generated.
 
 ## Goodies
 ### Logos
-![16](https://dl.dropbox.com/s/yzucc8550au2ice/reddrop_16.png) 
-![32](https://dl.dropbox.com/s/s2g02lhozml8v9r/reddrop_32.png) 
-![64](https://dl.dropbox.com/s/ckjv8f9kejmmwl6/reddrop_64.png) 
-![128](https://dl.dropbox.com/s/jjttk7knsi6eey3/reddrop_128.png)
+![16](https://dl.dropboxusercontent.com/s/gad8ki5u4v531dr/reddrop_16.png) 
+![32](https://dl.dropboxusercontent.com/s/9sakooz0zqvo234/reddrop_32.png) 
+![64](https://dl.dropboxusercontent.com/s/8voz7sccasf0m3w/reddrop_64.png) 
+![128](https://dl.dropboxusercontent.com/s/0loez2xn3qw8r9h/reddrop_128.png)
 
 ### Preview
-![wrong](https://dl.dropbox.com/s/4dprvkb5arj10ui/reddrop_projectroot.png)
+![wrong](https://dl.dropbox.com/s/bzanck89rh2ude6/reddrop_projectroot.png)
 
 ## License
 Copyright (c) 2012 Curly Brackets
