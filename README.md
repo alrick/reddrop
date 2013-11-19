@@ -25,7 +25,7 @@ You have to get your own Dropbox's API keys :
 1. Go to https://www.dropbox.com/developers/apps
 2. Create app (Dropbox API app, Files and datastores, No My app needs access to files already on Dropbox, All file types)
 3. Apply for production
-4. Configure the _appkey_ and _appsecret_ in _redmine_reddrop/app/models/daccess.rb_
+4. Configure the _appkey_ and _appsecret_ in __redmine_reddrop/app/models/daccess.rb__
 
 ### How to install
 Once you've configured your Dropbox's keys, simply follow this steps : 
