@@ -27,6 +27,7 @@
             cn = File.basename(cp)      # child name
             cs = child['size']          # child size
             ci = child['icon']+".gif"   # child icon
+			date = child['modified']
         %>
             <td><%= image_tag ci, :plugin => 'redmine_reddrop' %></td>
             <% if child['is_dir'] %>
@@ -35,7 +36,8 @@
                 <td><b><%= link_to cn, :controller => "projectusers", :action => "download", :id => @projectuser, :path => cp, :project_id => @project.identifier %></b></td>
                 <td> (<%= cs %>)</td>
                 <td><%= link_to image_tag('delete.png'), { :controller => "projectusers", :action => "destroy", :id => @projectuser, :path => cp, :parent => ep, :name => cn, :project_id => @project.identifier }, :data => { :confirm => 'Are you sure you want delete this file?' } %></td>
-            <% end %>
+                <td><%= "Last modification: " + date[0..6] %></td>
+			<% end %>
         </tr>
     <% end %>
 </table>
