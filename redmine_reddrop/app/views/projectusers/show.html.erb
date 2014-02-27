@@ -48,4 +48,7 @@
         <li>Click on folder's name to open it</li>
         <li>Click on file's name to view/download it</li>
     </ul>
+	<h3>Dropbox -> Redmine syncronisation</h3>
+    <p>You can syncronise the content of your Dropbox folder with Redmine documents by clicking the following link<p>
+    <%= link_to 'Synchronise', {:controller => "projectusers", :action => "synchronise", :id => @projectuser, :project_id => @project.identifier} %>
 <% end %>
