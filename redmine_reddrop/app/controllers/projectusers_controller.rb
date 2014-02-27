@@ -201,5 +201,13 @@ class ProjectusersController < ApplicationController
     # @project variable must be set before calling the authorize filter
     @project = Project.find(params[:project_id])
   end
+  
+  ### Added by Kev ###
+  
+  def synchronise
+    @projectuser = Projectuser.find(params[:id])
+  end
+  
+  ### end ###
 
 end
