@@ -1,6 +1,15 @@
 <% html_title "Reddrop" %>
-<% ep = @entry['path'] %>
+<% ep = @entry['path']  #return the path where the file is %>
 <h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop</h2>
+
+<!-- Functions/tests added by me -->
+
+<h2><%= %></h2>
+
+
+
+<!-- end of tests -->
+
 <div class="contextual">
     <%= link_to "Change Dropbox user", :controller => "projectusers", :action => "index", :project_id => @project.identifier %>
 </div>
@@ -27,7 +36,7 @@
             cn = File.basename(cp)      # child name
             cs = child['size']          # child size
             ci = child['icon']+".gif"   # child icon
-			date = child['modified']
+	    mdate = child['modified']   # child modified date
         %>
             <td><%= image_tag ci, :plugin => 'redmine_reddrop' %></td>
             <% if child['is_dir'] %>
@@ -36,8 +45,8 @@
                 <td><b><%= link_to cn, :controller => "projectusers", :action => "download", :id => @projectuser, :path => cp, :project_id => @project.identifier %></b></td>
                 <td> (<%= cs %>)</td>
                 <td><%= link_to image_tag('delete.png'), { :controller => "projectusers", :action => "destroy", :id => @projectuser, :path => cp, :parent => ep, :name => cn, :project_id => @project.identifier }, :data => { :confirm => 'Are you sure you want delete this file?' } %></td>
-                <td><%= "Last modification: " + date[0..6] %></td>
-			<% end %>
+                <td><%= "Last Modification: "+mdate %></td>
+            <% end %>
         </tr>
     <% end %>
 </table>
@@ -48,7 +57,4 @@
         <li>Click on folder's name to open it</li>
         <li>Click on file's name to view/download it</li>
     </ul>
-	<h3>Dropbox -> Redmine syncronisation</h3>
-    <p>You can syncronise the content of your Dropbox folder with Redmine documents by clicking the following link<p>
-    <%= link_to 'Synchronise', {:controller => "projectusers", :action => "synchronise", :id => @projectuser, :project_id => @project.identifier} %>
 <% end %>

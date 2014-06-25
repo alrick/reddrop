@@ -76,4 +76,49 @@ class GeneratedfoldersController < ApplicationController
   def check_exists(name)
     Generatedfolder.exists?(:name => name)
   end
+
+  def show_db_entries
+    @attachments = Attachment.where("container_id IS NULL")
+  end
+
+  def create_from_enum
+    createdFolders = 0
+    enumeration = Enumeration.where("type = 'DocumentCategory'")
+    enumeration.each do |e|
+      name = e.name
+      name = check_name(name)
+
+      if !check_exists(name)
+        newFolder = Generatedfolder.new(:name => name)
+        if newFolder.save
+          createdFolders += 1
+        else
+          flash[:error] = "Error during folder save, please try again."
+        end
+      else
+        next
+      end
+    end
+    if createdFolders == 0
+      flash[:notice] = "No folders were created, they already all exist."
+    else
+      flash[:notice] = createdFolders.to_s+" folders successfully created."
+    end
+    redirect_to :action => "index"
+  end
+
+  def delete_attachment
+    attachmentsID = params[:attachment_checkbox] #get array of attachments id
+    attachmentsID.each do |a|
+      begin
+        Attachment.find(a.to_i).destroy
+      rescue Exception => deleteCheckbox
+        flash[:error] = "An error occured during file suppression, please try again."
+        redirect_to :action => "show_db_entries"
+        return
+      end
+    end
+    flash[:notice] = "Attachment(s) successfully deleted."
+    redirect_to :action => "show_db_entries"
+  end
 end

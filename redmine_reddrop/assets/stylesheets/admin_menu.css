@@ -1,0 +1,15 @@
+table{
+  border-collapse: collapse;
+}
+
+#db_entries_table th,
+#db_entries_table td{
+  border: 1px solid black;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#delete_attach_button{
+  margin-top: 5px;
+}
