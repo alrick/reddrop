@@ -5,6 +5,7 @@
 Reddrop is a plugin for Redmine that allows users of that service to sync their documents and files using Dropbox. 
 Reddrop is a replacement for the _files_ and _documents_ tabs in Redmine and allows to browse a Dropbox's folder hierarchically.
 
+Also, the user can upload his files from Dropbox to Redmine only by clicking a link. These files will be available in the Redmine _documents_ tab.
 ## Donate
 If you like it, feel free to donate some love ;)
 
@@ -15,6 +16,8 @@ Reddrop is compatible with the following versions :
 
 * 2.0.3 (tested)
 * 2.3.0 (tested)
+* 2.4.2 (tested)
+* 2.5.1 (tested)
 
 Let me know if you succeeded run it on other versions.
 
@@ -64,6 +67,9 @@ Go on a project page and then Reddrop tab. You will find a "Reddrop this project
 Go on a project page and then Reddrop Tab. In the main part of the page, you'll find all users that have reddroped this project.
 Select a user and you will be able to browse its folders, add and remove files.
 
+#### Perform a Dropbox -> Redmine synchronisation
+Once a project is Reddroped, the user can synchronise all the files present in his Dropbox folder project with the Redmine _Documents_ tab. This will upload all the files from Dropbox to Redmine.
+
 #### Share a Reddrop folder
 You can use the Dropbox "shared folders" option to share folders that are linked to Redmine with Reddrop. Simply share any folders you want to but remember that only one person have to Reddrop this folder to avoid duplication.
 
@@ -81,6 +87,9 @@ As an admin, you can configure folders that are generated in the user's Dropbox 
 
 In order to access this functionality, go to _Administration -> Reddrop_ settings.
 On this page you can add, remove or rename folders that are generated.
+
+#### Inspect database
+If a problem occurs during the synchronisation, some files could be added in the database but not accessible by the user. In order to prevent "trash files" in the database a little menu allows the administrator to delete these entries simply.
 
 ## Goodies
 ### Logos
