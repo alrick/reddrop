@@ -5,8 +5,8 @@ Redmine::Plugin.register :redmine_reddrop do
   author 'Alrick Deillon, Kevin Tomba'
   description 'Reddrop is a plugin for Redmine that allows users of that service to sync their documents and files using Dropbox.'
   version '2.0b'
-  url 'http://curlybrackets.ch/reddrop'
-  author_url 'http://curlybrackets.ch'
+  url 'https://github.com/kevtomba/Reddrop'
+  author_url 'https://github.com'
 
   menu :top_menu, :reddrop, { :controller => 'accesstokens', :action => 'index' }, :caption => 'Reddrop linking', :before => 'Help'
   menu :admin_menu, :reddrop, { :controller => 'generatedfolders', :action => 'index' }, :caption => 'Reddrop settings', :last => true, :html => {:style => 'background: url(/plugin_assets/redmine_reddrop/images/reddrop_16.png); background-repeat: no-repeat'}
