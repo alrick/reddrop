@@ -347,7 +347,7 @@ class ProjectusersController < ApplicationController
                 return
               else
                 delete_attachment_if_error
-                flash[:error] = "Synchronisation failed, please try again."
+                flash[:error] = "Synchronisation failed, please try again. If the problem persists, try to relog your account to Redmine."
                 redirect_to :action => "index", :project_id => @project.identifier
                 return
               end
@@ -387,7 +387,7 @@ class ProjectusersController < ApplicationController
               return  
             else
               delete_attachment_if_error
-              flash[:error] = "Synchronisation failed, please try again."
+              flash[:error] = "Synchronisation failed, please try again. If the problem persists, try to relog your account to Redmine."
               redirect_to :action => "index", :project_id => @project.identifier
               return
             end  
@@ -446,7 +446,7 @@ class ProjectusersController < ApplicationController
     rescue Exception => uploadError
       @errorOccured = true
       @uploadError = true
-      @errors << "An error occured during ("+@fileName+") upload, please try again."
+      @errors << "An error occured during '"+@fileName+"' upload, please try again."
       error_log_message("The upload Token for file '"+@fileName+"' could not be retrieved. Check the first upload request's params")
       return
     end
