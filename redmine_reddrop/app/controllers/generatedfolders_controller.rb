@@ -102,7 +102,7 @@ class GeneratedfoldersController < ApplicationController
     if createdFolders == 0
       flash[:notice] = "No folders were created, they already all exist."
     else
-      flash[:notice] = createdFolders.to_s+" folders successfully created."
+      flash[:notice] = createdFolders.to_s+" folder(s) successfully created."
     end
     redirect_to :action => "index"
   end
