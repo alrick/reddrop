@@ -487,7 +487,7 @@ class ProjectusersController < ApplicationController
 
   def error_log_message(message)
     ## Default message displayed for the admin if a "serious" problem occurs
-    logger.info("REDDROP ERROR: ["+"#{DateTime.now}"+"] [Project: "+"#{@project.identifier}"+"] "+"#{message}")    
+    logger.info("REDDROP ERROR: ["+"#{DateTime.now}"+"] [Project: "+"#{@project.identifier}"+"] [User: "+"#{User.current}"+"] "+"#{message}")    
   end
 
   def check_project_members
