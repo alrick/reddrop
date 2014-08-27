@@ -1,15 +1,6 @@
 <% html_title "Reddrop" %>
 <% ep = @entry['path']  #return the path where the file is %>
 <h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop</h2>
-
-<!-- Functions/tests added by me -->
-
-<h2><%= %></h2>
-
-
-
-<!-- end of tests -->
-
 <div class="contextual">
     <%= link_to "Change Dropbox user", :controller => "projectusers", :action => "index", :project_id => @project.identifier %>
 </div>
