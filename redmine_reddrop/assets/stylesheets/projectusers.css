@@ -1,0 +1,12 @@
+#sync_started{
+  color: green;
+  font-weight: bold;
+}
+
+#hidden_sync{
+  color: blue;
+}
+
+#hidden_force_sync{
+  color: blue;
+}

@@ -1,7 +1,7 @@
 <% html_title "Reddrop Settings" %>
 <h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop - Settings</h2>
 <h3>Generated folders</h3>
-<p><b>Note : </b>Spaces will be converted to '_' and special characters will be removed.</p>
+<p><strong>List of current generated folders</strong></p>
 <table>
   <% @generatedfolders.each do |g| %>
     <tr>
@@ -14,12 +14,32 @@
   <% end %>
 </table>
 <br />
-<%= form_tag(:controller => "generatedfolders", :action => "create") do %>
-  <%= label_tag(:name, "Name:") %>
-  <%= text_field_tag(:name) %>
-  <%= submit_tag("Add") %>
-<% end %>
+<p><strong>Notes about synchronisation and generated folders</strong></p>
+<ul>
+  <li>Spaces will be converted to '_' and special characters will be removed.</li>
+  <li>In order to perform a successfully synchronisation with Reddrop, Generated folders name MUST match Redmine's Documents name. Therefore you can choose to create the document category manually (<em>Administration -> Enumeration (Document Category list)</em>) and the Generated Folder, or you can do this manually by clicking the link below.</li>
+</ul>
 
+<p><strong>Enter generated folder name</strong></p>
+<ul>
+  <li>
+    <%= form_tag(:controller => "generatedfolders", :action => "create") do %>
+      <%= label_tag(:name, "Name:") %>
+      <%= text_field_tag(:name) %>
+      <%= submit_tag("Add") %>
+    <% end %>
+  </li>
+</ul>
+<p><strong>Click here to create generated folders from Redmine document categories</strong></p>
+<ul>
+  <li><%= image_tag 'folder.png' %> <%= link_to 'Create folders', :controller => "generatedfolders", :action => "create_from_enum" %></li>
+</ul>
+<p></p>
+<h3>Clean Database</h3>
+<p>This link give access to all the attachments in the database with a <em>nil</em> container_id. These entries are usually created when something went wrong when uploading or attaching a file to a document.</p>
+<ul>
+  <li><%= image_tag 'magnifier.png' %><%= link_to 'Show database entries', :controller => "generatedfolders", :action => "show_db_entries" %></li> 
+</ul>
 <% content_for :sidebar do %>
     <h3>Information</h3>
     <p>

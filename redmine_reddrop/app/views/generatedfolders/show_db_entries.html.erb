@@ -1,0 +1,45 @@
+<% html_title 'Database Cleaning' %>
+<h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Database Cleaning Menu</h2>
+<% if @attachments.exists? %>
+  <% count = 0 %>
+  <%= form_tag(:controller => "generatedfolders", :action => "delete_attachment") do %>
+    <table id="db_entries_table">
+    <tr>
+      <th>ID</th>
+      <th>Filename</th>
+      <th>Filesize</th>
+      <th>Created On</th>
+      <th>Author</th>
+      <th><%= check_box_tag('check_all', 'principal_checkbox', false, :onclick => "checkAllCheckboxes()") %></th>
+    </tr>
+    <% @attachments.each do |a| %>
+      <% count += 1 %>
+      <tr>
+        <td><%= a.id %></td>
+        <td><%= a.filename %></td>
+        <td><%= number_to_human_size(a.filesize) %></td>
+        <td><%= a.created_on %></td>
+        <td><%= User.find(a.author_id) %></td>
+        <td><%= check_box_tag "attachment_checkbox[]", "#{a.id}", false, :id => "checkbox_attachment_"+"#{count}" %></td>
+      </tr>
+    <% end %>      
+    </table>
+    <%= submit_tag("Delete", :id => "delete_attach_button", :confirm => "Are you sure?") %>
+  <% end %>  
+<% else %>
+  <p><strong><%= image_tag 'warning.png' %> No entries with a <em>nil</em> container_id were found in the Database.</strong></p>
+<% end %>
+
+<% content_for :sidebar do %>
+  <h3>Informations</h3>
+  <p>Choose the attachment(s) you want to delete by checking the box then click the 'Delete' button. You'll be automatically redirected to this page.</p>
+  <h3>Administration</h3>
+  <div id="admin-menu">
+    <ul><%= render_menu :admin_menu %></ul>
+  </div>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'admin_menu', :plugin => 'redmine_reddrop' %>
+  <%= javascript_include_tag 'reddrop', :plugin => 'redmine_reddrop' %>
+<% end %>

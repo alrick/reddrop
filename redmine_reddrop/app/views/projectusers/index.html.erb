@@ -1,6 +1,8 @@
 <% html_title "Reddrop" %>
-<h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop</h2>
 
+<p id="sync_started", style="display:none"><%= image_tag 'loading_logo.gif', :plugin => 'redmine_reddrop' %> Synchronisation in progress, please wait and do NOT leave the page...</p>
+<h2><%= image_tag 'reddrop_32.png', :plugin => 'redmine_reddrop' %> Reddrop2 (Beta version)</h2>
+<h3><%= image_tag 'reddrop_16.png', :plugin => 'redmine_reddrop' %> Consult Dropbox folder</h3>
 <p>
   Please select a Dropbox account to consult his content.
 </p>
@@ -11,11 +13,35 @@
   <% else %>
     <% @projectusers.each do |p| %>
       <li>
-        <%= link_to p.accesstoken.email, { :controller => "projectusers", :action => "show", :id => p, :project_id => @project.identifier }, :class => "icon icon-user" %>
+        <%= link_to p.accesstoken.email, { :controller => "projectusers", :action => "show", :id => p, :project_id => @project.identifier}, :class => "icon icon-user" %>
       </li>
+</ul>
+  <h3><%= image_tag 'reddrop_16.png', :plugin => 'redmine_reddrop' %> Synchronisation</h3>
+  <p>Synchronise the linked Dropbox with Redmine documents.</p>
+  <ul>
+    <li id="sync_link"><%= link_to 'Synchronise', {:controller => "projectusers", :action => "dropbox_sync", :id => p, :project_id => @project.identifier}, :class => "icon icon-reload", :onclick => "return displayMessage()" %></li>
+    <li id="hidden_sync", style="display:none">Synchronisation will be available soon, please wait...</li>
+  </ul>
+  <p><strong>What will synchronisation do?</strong></p>
+  <ul>
+    <li>Reddrop is going to run through the Dropbox content of this project then create, on Redmine platform, documents which match folders name and upload the files present in your Dropbox in these new documents.</li>
+    <li>Note: Max file size for upload: <strong><%= number_to_human_size(Setting.attachment_max_size.to_i.kilobytes) %></strong>.</li>
+  </ul>
+  <p><strong>What are the benefits?</strong></p>
+  <ul>
+    <li>You can save your work somewhere else than Dropbox.</li>
+    <li>When the project is over, you can delete your Dropbox folder but still have access to your work through Redmine.</li>
+    <li>You can have an overview of the project activity, every time a synchronisation is done, the <em>Activity</em> tab is updated.</li>
+    <li>And more... </li>
+  </ul>
+  <p><strong><%= image_tag 'warning.png' %> Force synchronisation</strong></p>
+  <ul>
+    <li>Forcing synchronisation will remove all the files of this project uploaded with previous synchronisation then re-upload all the content of your Dropbox folder. Use this only if you encounter problems with a standard synchronisation.</li>
+    <li id="force_sync"><%= link_to 'Force synchronisation', {:controller => "projectusers", :action => "force_sync", :id => p, :project_id => @project.identifier}, :class => "icon icon-warning", :onclick => "return displayMessage()" %></li>
+    <li id="hidden_force_sync", style="display:none">Forced synchronisation will be available soon, please wait...</li>
+  </ul>
     <% end %>
   <% end %>
-</ul>
 
 <% content_for :sidebar do %>
   <% if @has_reddroped == true %>
@@ -25,4 +51,9 @@
   <% end %>
   <p>Reddrop a project will add this project to your Dropbox account and generate necessary folders.</p>
   <p>unReddrop a project will remove access to your Dropbox for this project, you will keep files in your Dropbox and can delete them manually.</p>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'projectusers', :plugin => 'redmine_reddrop' %>
+  <%= javascript_include_tag 'reddrop', :plugin => 'redmine_reddrop' %>
 <% end %>
