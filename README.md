@@ -6,10 +6,6 @@ Reddrop is a plugin for Redmine that allows users of that service to sync their 
 Reddrop is a replacement for the _files_ and _documents_ tabs in Redmine and allows to browse a Dropbox's folder hierarchically.
 
 Also, the user can upload his files from Dropbox to Redmine only by clicking a link. These files will be available in the Redmine _documents_ tab.
-## Donate
-If you like it, feel free to donate some love ;)
-
-[![Donate](https://dl.dropboxusercontent.com/s/8blrhemwhytipye/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EP9QQNXD9BRNE)
 
 ## Compatibility
 Reddrop is compatible with the following versions :
@@ -92,16 +88,6 @@ On this page you can add, remove or rename folders that are generated.
 
 #### Inspect database
 If a problem occurs during the synchronisation, some files could be added in the database but not accessible by the user. In order to prevent "trash files" in the database a little menu allows the administrator to delete these entries simply.
-
-## Goodies
-### Logos
-![16](https://dl.dropboxusercontent.com/s/6tkms8op740htv6/reddrop_16.png) 
-![32](https://dl.dropboxusercontent.com/s/el6i7rz9eonzrvl/reddrop_32.png) 
-![64](https://dl.dropboxusercontent.com/s/t4q88wno5hzlaa9/reddrop_64.png) 
-![128](https://dl.dropboxusercontent.com/s/pirqn9hhoed3tsj/reddrop_128.png)
-
-### Preview
-![wrong](https://dl.dropboxusercontent.com/s/ltwdy8evsz9xupe/reddrop_projectroot.png)
 
 ## License
 Copyright (c) 2012 Alrick Deillon
